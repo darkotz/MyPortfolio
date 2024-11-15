@@ -1,21 +1,18 @@
-import "./header.css";
-import { useState } from "react";
 import * as React from "react";
-import Box from "@mui/material/Box";
+import { useState } from "react";
+import "./header.css";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import Typography from "@mui/material/Typography";
+import { Tab } from "@mui/material";
 
 export default function Header() {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("tab1");
+
+  const handleButtonClick = (tabId) => {
+    setActiveTab(tabId);
+  };
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -39,14 +36,29 @@ export default function Header() {
       <div className="btnGroup">
         <button>Contact me</button>
         <button>Info</button>
-        <button onClick={toggleDrawer(anchor, true)}>Menu</button>
+        <button onClick={toggleDrawer(true)}>Menu</button>
 
         <Drawer
-          anchor={anchor}
-          open={state[anchor]}
-          onClose={toggleDrawer(anchor, false)}
+          className="drawer"
+          anchor="right"
+          open={open}
+          onClose={toggleDrawer(false)}
         >
-          {list(anchor)}
+          <div className="drawer-content">
+            <Typography
+              variant="h3"
+              gutterBottom
+              style={{ textAlign: "center", color: "#859f3d" }}
+            >
+              menu
+            </Typography>
+            <button
+              onClick={() => handleButtonClick("tab1")}
+              className="button-drawer"
+            >
+              schedule
+            </button>
+          </div>
         </Drawer>
       </div>
     </div>
