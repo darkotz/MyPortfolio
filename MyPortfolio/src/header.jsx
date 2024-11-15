@@ -3,7 +3,6 @@ import { useState } from "react";
 import "./header.css";
 import Drawer from "@mui/material/Drawer";
 import Typography from "@mui/material/Typography";
-import { Tab } from "@mui/material";
 
 export default function Header() {
   const [isFlipped, setIsFlipped] = useState(false);

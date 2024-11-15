@@ -9,7 +9,7 @@
   flex-direction: row;
   width: 100%;
   box-shadow: 5px 10px 15px grey;
-  position: fixed;
+  position: relative;
 }
 .logo {
   display: flex;

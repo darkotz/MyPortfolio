@@ -7,6 +7,7 @@ import Body from "./Body";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Header></Header>
-    <Body />
+    <Body></Body>
+    <div>hello</div>
   </StrictMode>
 );

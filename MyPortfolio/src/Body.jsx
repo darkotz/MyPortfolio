@@ -1,10 +1,11 @@
 import Header from "./header";
+import { Typography } from "@mui/material";
 
 export default function Body() {
   return (
-    <>
-      <div>hello</div>
-    </>
+    <div className="body">
+      <Typography>hello</Typography>
+    </div>
   );
 
   //1)доделать переключение между вкладками
