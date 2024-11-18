@@ -4,14 +4,9 @@ import "./header.css";
 import Drawer from "@mui/material/Drawer";
 import Typography from "@mui/material/Typography";
 
-export default function Header() {
+export default function Header({ onPageChange }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const [open, setOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("tab1");
-
-  const handleButtonClick = (tabId) => {
-    setActiveTab(tabId);
-  };
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -21,6 +16,11 @@ export default function Header() {
     event.preventDefault();
     setIsFlipped(!isFlipped);
   };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div className="headerMain">
       <div className="logo">
@@ -52,10 +52,16 @@ export default function Header() {
               menu
             </Typography>
             <button
-              onClick={() => handleButtonClick("tab1")}
               className="button-drawer"
+              onClick={() => onPageChange("home")}
             >
-              schedule
+              Главная
+            </button>
+            <button
+              className="button-drawer"
+              onClick={() => onPageChange("schedule")}
+            >
+              Расписание
             </button>
           </div>
         </Drawer>
