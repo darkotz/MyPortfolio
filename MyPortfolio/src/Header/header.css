@@ -29,7 +29,7 @@ a {
   color: inherit;
   width: 250px;
   font-size: 20px;
-  color: #859f3d;
+  color: #a3e1f6;
 }
 .Flipped {
   transform: rotate(180deg);
@@ -47,12 +47,14 @@ button {
   font-size: 20px;
   padding: 10px;
   border-radius: 10px;
-  color: #859f3d;
+  color: #a3e1f6;
   transition: linear 0.3s;
   cursor: pointer;
 }
 button:hover {
   background-color: white;
+  color: #488da4;
+  scale: 105%;
 }
 
 .drawer {
@@ -62,6 +64,9 @@ button:hover {
   width: 300px;
   border-radius: 10px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .button-drawer {

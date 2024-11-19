@@ -47,7 +47,7 @@ export default function Header({ onPageChange }) {
             <Typography
               variant="h3"
               gutterBottom
-              style={{ textAlign: "center", color: "#859f3d" }}
+              style={{ textAlign: "center", color: "#483D8B" }}
             >
               menu
             </Typography>
