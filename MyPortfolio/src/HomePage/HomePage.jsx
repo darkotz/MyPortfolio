@@ -5,8 +5,9 @@ export default function HomePage() {
   return (
     <div className="main">
       <Typography variant="h3" gutterBottom>
-        Your websites- in a minnute!
+        main...
       </Typography>
     </div>
+    
   );
 }

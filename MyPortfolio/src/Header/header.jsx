@@ -1,17 +1,45 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import "./header.css";
 import Drawer from "@mui/material/Drawer";
 import Typography from "@mui/material/Typography";
+import { ThemeProvider, createTheme, CssBaseline, Button } from '@mui/material';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 
-export default function Header({ onPageChange }) {
+
+export default function MainColorMode({ onPageChange }) {
+
+  const [darkMode, setDarkMode] = useState(false)
+
+  const lightTheme = useMemo(() =>
+    createTheme({
+      palette: {
+        mode: 'light',
+      },
+    }), []
+  );
+
+  const darkTheme = useMemo(() =>
+    createTheme({
+      palette: {
+        mode: 'dark',
+      },
+    }), []
+  );
+
+  const toggleTheme = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
+
   const [isFlipped, setIsFlipped] = useState(false);
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-
+  
   const handleClick = (event) => {
     event.preventDefault();
     setIsFlipped(!isFlipped);
@@ -21,7 +49,11 @@ export default function Header({ onPageChange }) {
     setCurrentPage(page);
   };
 
+  
+
   return (
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <CssBaseline />
     <div className="headerMain">
       <div className="logo">
         <a
@@ -33,6 +65,12 @@ export default function Header({ onPageChange }) {
         </a>
       </div>
       <div className="btnGroup">
+      <div style={{ textAlign: 'center', padding: '20px' }}>
+        
+        <Button variant="contained" onClick={toggleTheme}>
+          Переключить на {darkMode ? <LightModeIcon/> : <DarkModeIcon/>} тему
+        </Button>
+      </div>
         <button>Contact me</button>
         <button>Info</button>
         <button onClick={toggleDrawer(true)}>Menu</button>
@@ -52,7 +90,7 @@ export default function Header({ onPageChange }) {
               menu
             </Typography>
             <button
-              className="button-drawer"
+              className="butto  n-drawer"
               onClick={() => onPageChange("home")}
             >
               Главная
@@ -67,5 +105,7 @@ export default function Header({ onPageChange }) {
         </Drawer>
       </div>
     </div>
+    </ThemeProvider>
   );
 }
+

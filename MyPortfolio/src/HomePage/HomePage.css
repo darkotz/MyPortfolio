@@ -1,8 +1,7 @@
 .main {
-  background-color: white;
   height: 100vh;
   padding: 10px;
   display: flex;
   justify-content: center;
-  color: black;
+
 }
