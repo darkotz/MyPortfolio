@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "../Header/header";
 import HomePage from "../HomePage/HomePage";
 import SchedulePage from "../Schedule/SchedulePage";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import "./Body.css";
 
 export default function Body() {
@@ -17,7 +17,6 @@ export default function Body() {
       light: true,
     },
   });
-  
 
   return (
     <ThemeProvider theme={theme}>

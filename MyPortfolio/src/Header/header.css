@@ -8,18 +8,17 @@
   padding: 10px;
   flex-direction: row;
   width: 100%;
-  box-shadow: 5px 10px 15px grey;
+  box-shadow: 5px 5px 10px rgb(69, 69, 69);
   position: sticky;
   top: 0;
 }
 .logo {
   display: flex;
   flex-wrap: wrap;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Playwrite DE Grund", serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 800;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
 }
 
 a {
@@ -40,6 +39,7 @@ a {
   gap: 10px;
   margin: 20px;
   flex-wrap: wrap;
+  align-items: center;
 }
 button {
   text-decoration: none;
@@ -70,5 +70,8 @@ button:hover {
 }
 
 .button-drawer {
-  width: 300px;
+  width: 260px;
+}
+.navBarBtn {
+  height: 40px;
 }
