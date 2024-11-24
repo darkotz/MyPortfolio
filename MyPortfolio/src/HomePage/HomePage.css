@@ -2,3 +2,14 @@
   height: 100vh;
   padding: 30px 10px 10px 10px;
 }
+.CarouselImage{
+  width: 200px;
+
+}
+.CarouselBlock{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: "250px";
+  background-color: red;
+}

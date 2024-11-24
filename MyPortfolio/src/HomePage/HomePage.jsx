@@ -1,30 +1,28 @@
 import "./HomePage.css";
+import carouselImage1 from '../Carousel-Images-Main/image1.jpg'  
+import carouselImage2 from '../Carousel-Images-Main/image2.jpg'   
+import carouselImage3 from '../Carousel-Images-Main/image3.jpg'   
+import carouselImage4 from '../Carousel-Images-Main/image4.jpg'    
 
 import { Carousel } from "antd";
 
-const contentStyle = {
-  height: "250px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
+
 
 export default function HomePage() {
   return (
     <div className="main">
-      <Carousel autoplay style={{ zIndex: "-1" }}>
-        <div>
-          <h3 style={contentStyle}>1</h3>
+      <Carousel autoplay style={{ zIndex: "-1",}}>
+        <div className="CarouselBlock">
+        <img className="CarouselImage" src={carouselImage1} alt="" />
         </div>
-        <div>
-          <h3 style={contentStyle}>2</h3>
+        <div className="CarouselBlock">
+        <img className="CarouselImage" src={carouselImage2} alt="" />
         </div>
-        <div>
-          <h3 style={contentStyle}>3</h3>
+        <div className="CarouselBlock">
+        <img className="CarouselImage" src={carouselImage3} alt="" />
         </div>
-        <div>
-          <h3 style={contentStyle}>4</h3>
+        <div className="CarouselBlock">
+        <img className="CarouselImage" src={carouselImage4} alt="" />
         </div>
       </Carousel>
     </div>
