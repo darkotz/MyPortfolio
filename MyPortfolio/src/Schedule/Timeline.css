@@ -1,0 +1,71 @@
+/* Timeline.css */
+.timeline-container {
+    position: relative;
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timeline-line {
+    position: relative;
+    width: 80%;
+    height: 4px;
+    background: #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  .timeline-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #66d5f0;
+    transition: width 0.3s ease;
+  }
+  
+  .timeline-points {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    position: relative;
+  }
+  
+  .timeline-point {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .timeline-point.active {
+    background: #66d5f0;
+  }
+  
+  .timeline-point:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
