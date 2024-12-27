@@ -17,7 +17,7 @@ export default function SchedulePage() {
 
   return (
     <>
-      <h1>Schedule Timeline</h1>
+      <h1 style={{textAlign:"center", fontSize:"34px"}}>Timeline example</h1>
       <Timeline events={events} />
     </>
   );

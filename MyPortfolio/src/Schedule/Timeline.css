@@ -23,7 +23,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    background: #66d5f0;
+    background: #7b66f0;
     transition: width 0.3s ease;
   }
   
@@ -45,7 +45,7 @@
   }
   
   .timeline-point.active {
-    background: #66d5f0;
+    background: #7b66f0;
   }
   
   .timeline-point:hover .tooltip {
