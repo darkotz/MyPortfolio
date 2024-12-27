@@ -17,7 +17,7 @@ export default function SchedulePage() {
 
   return (
     <>
-      <h1>Interactive Timeline</h1>
+      <h1>Schedule Timeline</h1>
       <Timeline events={events} />
     </>
   );
