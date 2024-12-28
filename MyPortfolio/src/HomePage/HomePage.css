@@ -29,3 +29,12 @@
   flex-direction: column;
   gap: 30px;
 }
+.GradientText{
+  font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #170c8c, #b50df8);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+  
+}

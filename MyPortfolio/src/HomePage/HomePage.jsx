@@ -28,7 +28,7 @@ export default function HomePage() {
       </Carousel>
       <div className="main-right">
       <h1 className="main-text">
-      Hi, I’m Nikita, a passionate programmer with a love for solving complex problems and creating intuitive, efficient solutions. With experience in [Html, Css, Js, React, Bootstrap, Tailwind.css] and a focus on [Web Development], I build projects that blend creativity and functionality.
+      Hi, I’m Nikita, a passionate programmer with a love for solving complex problems and creating intuitive, efficient solutions. With experience in: <div ><a href="" className="GradientText">Html,</a> <a href="" className="GradientText">Css,</a> <a href="" className="GradientText">Js,</a> <a href="" className="GradientText">React,</a> <a href="" className="GradientText">Bootstrap,</a> <a href="" className="GradientText">Tailwind.css</a></div> and a focus on [Web Development], I build projects that blend creativity and functionality.
 
 
       </h1>
