@@ -23,6 +23,7 @@
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  font-size: 20px;
 }
 .main-right{
   display: flex;
@@ -30,11 +31,12 @@
   gap: 30px;
 }
 .GradientText{
-  font-size: 28px;
+  font-size: 22px;
       font-weight: bold;
       text-transform: uppercase;
       background: linear-gradient(90deg, #170c8c, #b50df8);
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-top: 10px;
   
 }
