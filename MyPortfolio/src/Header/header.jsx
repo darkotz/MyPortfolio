@@ -6,9 +6,20 @@ import Typography from "@mui/material/Typography";
 import { ThemeProvider, createTheme, CssBaseline, Button } from "@mui/material";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import { Modal } from 'antd';
 
 export default function MainColorMode({ onPageChange }) {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const [darkMode, setDarkMode] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
 
   const lightTheme = useMemo(
     () =>
@@ -54,7 +65,7 @@ export default function MainColorMode({ onPageChange }) {
           <a
             href="#"
             onClick={handleClick}
-            className={isFlipped ? "Flipped" : ""}
+            className="HeaderLogo"
           >
             Nikita Sosnovshchenko.
           </a>
@@ -69,11 +80,19 @@ export default function MainColorMode({ onPageChange }) {
               {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
             </Button>
           </div>
-          <button className="navBarBtn">Contact me</button>
+          <button className="navBarBtn" onClick={showModal}>Contact me</button>
           <button className="navBarBtn">Info</button>
           <button className="navBarBtn" onClick={toggleDrawer(true)}>
             Menu
           </button>
+
+          <Modal title="Basic Modal" open={isModalOpen} onCancel={handleCancel} footer={
+            <Button key="back" onClick={handleCancel}>
+            Return
+          </Button>
+          }>
+          <a href="https://github.com/darkotz?tab=overview&from=2024-12-01&to=2024-12-31">My GitHub</a>
+          </Modal>
 
           <Drawer
             className="drawer"
