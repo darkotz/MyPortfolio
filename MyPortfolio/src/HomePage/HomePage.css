@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .main-right {
@@ -54,4 +55,27 @@
   font-weight: 700;
   font-style: normal;
   font-size: 40px;
+}
+
+@media (min-width: 1400px) {
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  .main-text {
+    font-size: 35px;
+  }
+  .GradientText {
+    font-size: 40px;
+  }
+  .main-left-text {
+    width: 1000px;
+  }
+  .carousel {
+    max-width: 600px;
+  }
+  .CarouselImage {
+    width: 600px;
+  }
 }
