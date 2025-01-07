@@ -6,10 +6,10 @@ import Typography from "@mui/material/Typography";
 import { ThemeProvider, createTheme, CssBaseline, Button } from "@mui/material";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import { Modal } from 'antd';
+import { Modal } from "antd";
 
 export default function MainColorMode({ onPageChange }) {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
   const showModal = () => {
@@ -19,7 +19,6 @@ export default function MainColorMode({ onPageChange }) {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
-
 
   const lightTheme = useMemo(
     () =>
@@ -62,12 +61,8 @@ export default function MainColorMode({ onPageChange }) {
       <CssBaseline />
       <div className="headerMain">
         <div className="logo">
-          <a
-            href="#"
-            onClick={handleClick}
-            className="HeaderLogo"
-          >
-            Nikita Sosnovshchenko.
+          <a href="#" onClick={handleClick} className="HeaderLogo">
+            Nikita Sosnovshchenko
           </a>
         </div>
         <div className="btnGroup">
@@ -80,18 +75,27 @@ export default function MainColorMode({ onPageChange }) {
               {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
             </Button>
           </div>
-          <button className="navBarBtn" onClick={showModal}>Contact me</button>
+          <button className="navBarBtn" onClick={showModal}>
+            Contact me
+          </button>
           <button className="navBarBtn">Info</button>
           <button className="navBarBtn" onClick={toggleDrawer(true)}>
             Menu
           </button>
 
-          <Modal title="Basic Modal" open={isModalOpen} onCancel={handleCancel} footer={
-            <Button key="back" onClick={handleCancel}>
-            Return
-          </Button>
-          }>
-          <a href="https://github.com/darkotz?tab=overview&from=2024-12-01&to=2024-12-31">My GitHub</a>
+          <Modal
+            title="Basic Modal"
+            open={isModalOpen}
+            onCancel={handleCancel}
+            footer={
+              <Button key="back" onClick={handleCancel}>
+                Return
+              </Button>
+            }
+          >
+            <a href="https://github.com/darkotz?tab=overview&from=2024-12-01&to=2024-12-31">
+              My GitHub
+            </a>
           </Modal>
 
           <Drawer
