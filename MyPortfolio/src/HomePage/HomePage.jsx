@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import "./HomePage.css";
 import { gsap } from "gsap";
+import "./HomePage.css";
 import carouselImage1 from "../Carousel-Images-Main/image1.jpg";
 import carouselImage2 from "../Carousel-Images-Main/image2.jpg";
 import carouselImage3 from "../Carousel-Images-Main/image3.jpg";
@@ -80,10 +80,10 @@ export default function HomePage() {
           Hi, I’m Nikita, a passionate programmer with a love for solving
           complex problems and creating intuitive, efficient solutions. With
           experience in:{" "}
-          <h1 className="GradientText">
+          <div className="GradientText">
             {" "}
             Html, Css, Js, React, Bootstrap, Tailwind.css
-          </h1>{" "}
+          </div>{" "}
           and a focus on Web Development, I build projects that blend creativity
           and functionality.
         </h1>
