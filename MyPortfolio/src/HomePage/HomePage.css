@@ -1,5 +1,5 @@
 .main {
-  height: 100vh;
+  height: 200vh;
   padding: 30px 10px 10px 10px;
   display: flex;
   flex-direction: row;
@@ -35,7 +35,7 @@
 .main-right {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+
   align-items: center;
 }
 .GradientText {
@@ -55,9 +55,49 @@
   font-weight: 700;
   font-style: normal;
   font-size: 40px;
+  /*opacity: 0;
+  transform: translateX(-100px);*/
+}
+.image-right {
+  width: 600px;
+  height: 560px;
+  margin-top: 50px;
+  border-radius: 10px;
+  z-index: -1;
+  /*opacity: 0;
+  transform: translateX(100px);*/
 }
 
-@media (min-width: 1400px) {
+@media (max-width: 1150px) {
+  .main {
+    flex-direction: column;
+  }
+  .main-left {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .main-right {
+    flex-direction: row;
+  }
+  .devider {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .main {
+    flex-direction: column;
+  }
+  .main-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main-right {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1740px) {
   body {
     display: flex;
     justify-content: center;

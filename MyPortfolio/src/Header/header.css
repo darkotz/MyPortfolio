@@ -1,5 +1,5 @@
 .headerMain {
-  background-color: rgba(0, 0, 0, 0.85); 
+  background-color: rgba(0, 0, 0, 0.85);
   margin: 0px;
   height: 100px;
   display: flex;
@@ -7,12 +7,13 @@
   justify-content: space-between;
   padding: 10px;
   flex-direction: row;
-  width: 100%;
+  min-width: 100%;
   box-shadow: 5px 5px 10px rgb(69, 69, 69);
   position: sticky;
   top: 0;
 }
 .logo {
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   font-family: "Playwrite DE Grund", serif;
@@ -20,14 +21,14 @@
   font-weight: 800;
   font-style: normal;
 }
-.HeaderLogo{
+.HeaderLogo {
   font-size: 20px;
-      font-weight: bold;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, #170c8c, #b50df8);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffffff, #c027fc);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
 }
 
 a {
@@ -47,23 +48,23 @@ a {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin: 20px;
+  margin: 20px 0px 20px 0px;
   flex-wrap: wrap;
   align-items: center;
 }
 button {
   text-decoration: none;
   border: none;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: 700;
   padding: 10px;
   border-radius: 10px;
   color: #a3e1f6;
   transition: linear 0.3s;
   cursor: pointer;
+  background: linear-gradient(90deg, #ffffff, #c027fc);
 }
 button:hover {
-  background-color: white;
-  color: #488da4;
   scale: 105%;
 }
 
@@ -84,4 +85,24 @@ button:hover {
 }
 .navBarBtn {
   height: 40px;
+}
+
+@media (max-width: 1150px) {
+  .headerMain {
+    justify-content: center;
+    gap: 300px;
+  }
+}
+
+@media (max-width: 920px) {
+  .headerMain {
+    justify-content: center;
+    gap: 100px;
+  }
+}
+@media (max-width: 740px) {
+  .headerMain {
+    justify-content: center;
+    gap: 0px;
+  }
 }

@@ -84,7 +84,7 @@ export default function MainColorMode({ onPageChange }) {
           </button>
 
           <Modal
-            title="Basic Modal"
+            title="Contact me"
             open={isModalOpen}
             onCancel={handleCancel}
             footer={
