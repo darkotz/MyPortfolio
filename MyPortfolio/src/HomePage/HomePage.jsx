@@ -5,7 +5,7 @@ import carouselImage1 from "../Carousel-Images-Main/image1.jpg";
 import carouselImage2 from "../Carousel-Images-Main/image2.jpg";
 import carouselImage3 from "../Carousel-Images-Main/image3.jpg";
 import carouselImage4 from "../Carousel-Images-Main/image4.jpg";
-import ProgrammerImage from "../All-Images/programmer.jpg";
+import ProgrammerImage from "../All-Images/Programmer.jpg";
 import { Carousel } from "antd";
 import Divider from "@mui/material/Divider";
 import Chip from "@mui/material/Chip";
