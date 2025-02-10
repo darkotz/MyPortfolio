@@ -1,5 +1,10 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
 .main {
-  height: 200vh;
   padding: 30px 10px 10px 10px;
   display: flex;
   flex-direction: row;
